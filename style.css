@@ -1,0 +1,34 @@
+body{
+    background-color: #2ecc72;
+    color: white;
+}
+.imgPart{
+    margin-top: 20px;
+    padding: 0px 80px;
+}
+.info{
+    margin-top: 10px;
+    text-align: justify;
+}
+p{
+    /* font-size: 1.2em; */
+}
+.center{
+    margin-top: 20px;
+    text-align: center;
+}
+.TextContent{
+    margin-top: 20px;
+}
+.TextContent h1{
+    margin-bottom: 30px;
+}
+.btn1, .btn2, .btn3, .btn4{
+    border: none;
+    margin-right: 30px;
+    padding: 10px 10px;
+    background-color: #FF4848;
+    color: white;
+    font-size:  0.9em;
+    border-radius: 10px;
+}
