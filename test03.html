@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <title>Starting JQuery</title>
+    <style>
+        body{
+            background-color: #fd79a8;
+        }
+        .input-width{
+            margin: 0 auto;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-white">
+        <div class="text-center">
+            <h1 class="display-4 my-5 text-center">
+                Starting Jquery
+            </h1>
+            <input type="text" class="form-control input-width mb-5" placeholder="Enter para name here. eg. p-1">
+
+            <button class="btn btn-lg btn-outline-light px-4 hide" onclick="hideBtn()" value="true">Hide</button>
+
+            <button class="btn btn-lg btn-outline-dark px-4 show ml-5" value="true" onclick="showBtn()">Show</button>
+            
+            <button class="btn btn-lg btn-outline-info text-white px-4 show ml-5" value="true" onclick="showAllBtn()">Show All</button>
+
+            <p class="lead my-5 text-justify p-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia et ex excepturi suscipit ratione maxime culpa! Veniam dicta omnis quibusdam eveniet quos architecto repellendus tenetur ratione natus in, accusamus pariatur.</p>
+            <p class="lead my-5 text-left p-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia pariatur quam incidunt voluptas amet excepturi animi blanditiis a, asperiores autem!
+            </p>
+        </div>
+    </div>
+    <script>
+        function errorMsg(){
+            $('.p-1').prepend("<p class=' text-center animated infinite bounce error'>Please enter para name...</p>");
+            $('.show').prop('disabled', true);
+            $('.hide').prop('disabled', true);
+            setTimeout(()=>{
+                $('.error').remove();
+                $('.show').prop('disabled', false);
+                $('.hide').prop('disabled', false);
+            },2000)
+        }
+        function hideBtn(){
+            var val = $('input').val();
+            if(val != ''){
+                $('.'+val).hide();
+            }else{
+                errorMsg()
+            }
+        }
+        function showBtn(){
+            var val = $('input').val();
+            if(val != ''){
+                $('.'+val).show();
+            }else{
+                errorMsg()
+            }
+        }
+
+        function showAllBtn(){
+            $('p').show();
+        }
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
