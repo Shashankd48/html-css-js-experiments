@@ -31,30 +31,71 @@
         .bg-lightgreenishbblue{
             background-color: #55efc4;
         }
+        .bg-palm-springs-splash{
+            background-color: #218c74;
+        }
+        .bg-eye-of-newt{
+            background-color: #b33939;
+        }
+        .bg-c64-purple{
+            background-color: #706fd3;
+        }
+        .color-pick{
+            padding: 0px;
+            width: 300px;
+            border: none;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
     <div class="container text-white">
         <div class="text-center">
-            <h1 class="display-4 my-5 text-center">
+            <h1 class="display-4 mt-1 mb-3 text-center">
                 Events In Jquery
             </h1>
-            <input type="text" class="form-control input-width mb-5" placeholder="Enter para name here. eg. p-1">
+            <input type="text" class="form-control input-width mb-3" placeholder="Enter font-weight">
 
-            <button class="btn btn-lg btn-outline-warning text-white px-5 hide" onclick="hideBtn()" value="true">Hide</button>
+            <p class="lead">Choose para color</p>
+            <input type="color" class="form-control color-pick mb-5" value="#2c2c54">
 
-            <button class="btn btn-lg btn-outline-info text-white px-5 show ml-5" value="true" onclick="showBtn()">Show</button>
+            <button class="btn btn-lg btn-outline-warning text-white px-5 clickEvent" value="true">Click Event</button>
+
+            <button class="btn btn-lg btn-outline-info text-white px-5 show ml-5" value="true" >Show</button>
 
 
             <div class="row row-h my-5 font-weight-bold">
-                <div class="col bg-brightyarrow p-5">Lorem ipsum dolor sit amet.</div>
+                <div class="col bg-brightyarrow p-5 text-one">Lorem ipsum dolor sit amet.</div>
                 <div class="col bg-lightgreenishbblue p-5">Lorem ipsum dolor sit amet.</div>
                 <div class="col bg-pico6pink p-5">Lorem ipsum dolor sit amet.</div>
+            </div>
+
+            <div class="row row-h my-5 font-weight-bold section2">
+                <div class="col bg-c64-purple p-5 text-four">Lorem ipsum dolor sit amet.</div>
+                <div class="col bg-eye-of-newt p-5">Lorem ipsum dolor sit amet.</div>
+                <div class="col bg-palm-springs-splash p-5">Lorem ipsum dolor sit amet.</div>
             </div>
         </div>
     </div>
     <script>
-        
+        $(document).ready(function(){
+            $('.clickEvent').click(function(){
+                let fontWeight = $('.input-width').val();
+                let color = $('.color-pick').val();
+                console.log(color);
+                if(fontWeight != ''){
+                    $('.col').css({"font-weight":fontWeight,"color":color});
+                    $('.section2.col').css({"font-weight":fontWeight,"color":color+'a5'});
+                }
+            })
+            $('.show').hover(function(){
+                $('.text-one').show();
+            })
+            $('body').scroll(function(){
+                $(this).show();
+                console.log('scrolling');
+            })
+        })
     </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
