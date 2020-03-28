@@ -62,7 +62,8 @@
         function showBtn(){
             var val = $('input').val();
             if(val != ''){
-                $('.'+val).show();
+                console.log(val)
+                $('.'+val).show(2000,"linear");
             }else{
                 errorMsg()
             }
