@@ -4,52 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Basic Of JQuery</title>
-  
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: #ff6b81;
+        }
+        .img-bird{
+            width: 500px;
+        }
+    </style>
+    <title>Action in Jquery</title>
 </head>
 <body>
-        <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous">
-        </script>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 TextContent">
-                <h1>Welcome To JQuery</h1>
-                <ul>
-                    <li>Boring Lines of Text</li>
-                    <li>More Boring Lines</li>
-                    <li>At Least They are looking good</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem laboriosam, temporibus consequatur voluptatibus qui nesciunt esse provident consequuntur mollitia modi, minima velit eum est, ex aspernatur quo at quae nam.</p>
-                <Button class="btn3">Learn More.</Button>
-                <Button class="btn4">Back</Button>
-                <!-- <Button class="btn1">Hide Para</Button>
-                <Button class="btn2">Hide Heading</Button>
-                <br>
-                <br>
-                <Button class="btn3">Un Hide Para</Button>
-                <Button class="btn4">Un Hide Heading</Button> -->
-            </div>
-            <div class="col-md-6 imgPart">
-                <img src="cloud.png" alt="cloud" height="500px">
-                <div class="info">
-                    <h2>Information</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, modi. At autem voluptatibus illo atque exercitationem sequi consequuntur aspernatur! Rem temporibus at officia earum sit dicta iusto consequatur sint accusantium!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae non quidem eaque alias ducimus mollitia quam cum culpa voluptatibus esse.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis assumenda, atque quod excepturi suscipit molestiae error dignissimos recusandae hic ullam, dolore beatae officia cupiditate mollitia!</p>
-                </div>
+        <h1 class="text-center display-4 text-white mt-3 mb-5">
+            Actions In Jquery
+        </h1>
+        <div class="text-center">
+            <button class="btn btn-outline-dark btn-lg mt-4 hideImg">Hide Image</button>
+            <button class="btn btn-outline-light btn-lg mt-4 showImg ml-3">Show Image</button>
+            <button class="btn btn-outline-light btn-lg mt-4 toggle ml-3">Toggle</button>
+            <button class="btn btn-outline-light btn-lg mt-4 fadeOut ml-3">Fade Out</button>
+            <button class="btn btn-outline-light btn-lg mt-4 fadeIn ml-3">Fade In</button>
+            <button class="btn btn-outline-light btn-lg mt-4 fadeToggle ml-3">Fade Toggle</button>
+            <button class="btn btn-outline-light btn-lg mt-4 fadeTo ml-3">Fade To</button>
+            <button class="btn btn-outline-light btn-lg mt-4 fadeToBack ml-3">Fade To (Back)</button>
+            <div class="mt-5">
+                <img class="img-bird " src="https://cdn.pixabay.com/photo/2020/02/27/13/16/sea-gull-4884600_960_720.jpg" alt="bird">
             </div>
         </div>
-        <br>
     </div>
-    <script src="sc.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('.hideImg').click(() =>{
+                $('img').hide(1000);
+            })
+            $('.showImg').click(() =>{
+                $('img').show(2000);
+            })
+            $('.toggle').click(() =>{
+                $('img').toggle(500)
+            })
+
+            $('.fadeOut').click(() =>{
+                $('img').fadeOut(500)
+            })
+            $('.fadeIn').click(() =>{
+                $('img').fadeIn(500)
+            })
+
+            $('.fadeToggle').click(() =>{
+                $('img').fadeToggle(500)
+            })
+
+            $('.fadeTo').click(() =>{
+                $('img').fadeTo(500,0.6)
+            })
+
+            $('.fadeToBack').click(() =>{
+                $('img').fadeTo(500,1)
+            })
+        })
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
