@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!-- Popup plugins -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comic+Neue|Gotu|Montserrat|Roboto&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+            color: #fff;
+        }
+        h1{
+            font-family: 'Roboto', sans-serif;
+        }
+        button{
+            font-family: 'Gotu', sans-serif;
+        }
+        .city{
+            width: 300px;
+            margin: 0 auto;
+        }
+        .new{
+            background-color: #c44569;
+            padding: 20px 80px;
+        }
+        .new p{
+            text-align: justify;
+            font-size: 1.4em;
+        }
+    </style>
+    <link rel="stylesheet" href="animate.css">
+<title>Tpggle CSS Class in Jquery</title>
+</head>
+<body>
+    <div class="bg-info">
+        <h1 class="p-4 text-center text-white animated bounceInDown">Tpggle CSS Class in Jquery</h1>
+    </div>
+    <div class="container text-center changeDiv">
+        <h1>Changing CSS Classes</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi delectus et deleniti magni incidunt quod ipsa quisquam quo nulla debitis! Eius dicta ab rerum, tempore inventore fugiat aliquam perferendis autem.</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti consequatur in ipsa quidem, ipsum odio earum mollitia nesciunt sint aperiam aspernatur, facere molestias quam beatae accusantium ad totam dolore tenetur possimus. At quos praesentium quis provident earum assumenda quaerat fuga asperiores ducimus, atque aliquid ipsam, officiis maiores veritatis nulla eum!</p>
+
+
+        <button class="btn btn-dark btn-lg mt-4 changeCSS animated fadeInUp delay-1s">Change CSS</button>
+        <button class="btn btn-light btn-lg mt-4 toggleCSS ml-3 animated fadeInUp delay-1s">Toggle CSS</button>
+        <br>
+    </div>
+
+    <script>
+        $('.changeCSS').click(()=>{
+            $('.changeDiv').addClass('new')
+        })        
+
+        $('.toggleCSS').click(()=>{
+            $('.changeDiv').toggleClass('new');
+        })   
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

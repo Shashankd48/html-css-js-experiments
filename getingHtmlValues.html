@@ -51,10 +51,17 @@
 
         <a href="#" class="btn btn-primary btn-lg google ml-3 animated fadeInUp delay-2s">Google</a>
         <br>
+        <br>
+        <a href="#" class="btn btn-warning btn-lg changeH1 ml-3 animated fadeInUp delay-3s">Change Heading</a>
     </div>
 
     <script>
 
+        $('.changeH1').click(()=>{
+            $('h1').text((i, old)=>{
+                return old + 'Added via JQ'
+            });
+        })
         function animateCSS(element, animationName, callback) {
             const node = document.querySelector(element)
             node.classList.add('animated', animationName)
