@@ -10,12 +10,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         body{
-            background-color: #ff793f;
+            background-color: #596275;
         }
         .img-bird{
-            width: 650px;
+            width: 550px;
             min-width: 200px;
             max-width: 900px;
+
             position: relative;
         }
     </style>
@@ -29,8 +30,9 @@
         <button class="btn btn-info btn-lg mt-4 slideToggle ml-3">Slide Toggle</button>
         <button class="btn btn-primary btn-lg mt-4 animateBtn2 ml-3">Inc Width</button>
         <button class="btn btn-success btn-lg mt-4 animateBtn ml-3">Dec Width</button>
+        <button class="btn btn-warning btn-lg mt-4 chaningEx ml-3">Chaining Ex</button>
         <div class="text-center mt-4 img-div">
-            <img class="img-bird" src="https://cdn.pixabay.com/photo/2020/02/27/20/48/aircraft-4885805_960_720.jpg" alt="aircraft">
+            <img class="img-bird" src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="aircraft">
         </div>
     </div>
 
@@ -38,11 +40,18 @@
         $(()=>{
 
             var bo = true;
+            $('.chaningEx').click(()=>{
+                $('.img-div').css('background','#303952').fadeOut(1000);
+            })
             $('.slideUp').click(()=>{
-                $('img').slideUp(1000)
+                $('img').slideUp(1000,()=>{
+                    alert('Welcome to dumby');
+                })
             })
             $('.slideToggle').click(()=>{
-                $('img').slideToggle(500)
+                $('img').slideToggle(500,()=>{
+                    alert('Welcome to dumby');
+                })
             })
             $('.slideDown').click(()=>{
                 $('img').slideDown(1000)
