@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../Plugins/typeahead/typeahead.js"></script>
+    <title>Plugins in Jquery</title>
+    <style>
+        body{
+            background-color: #303952;
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+        .jb-width{
+            background-color: #596275;
+            height: 320px;
+        }
+        .stateOfUsa{
+            width: 500px;
+            margin: 0px auto !important;
+        }
+        @media(max-width:768px){
+            .stateOfUsa{
+                width: 300px;
+            }
+            .jb-width{
+                height: 320px;
+            }
+        }
+        @media(max-width:568px){
+            .jb-width{
+                height: 320x;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-white text-center display-4 my-5">Plugins in Jquery</h1>
+        <div class="jumbotron jb-width">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="the-basics">
+                        <div class="text-center">
+                            <input class="typeahead form-control stateOfUsa" type="text" placeholder="States of USA">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .tt-menu{
+            margin-top: 10px;
+            margin-left: 0px !important;
+            text-align: left;
+        }
+    </style>
+    <script src="type.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
